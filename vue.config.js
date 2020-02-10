@@ -5,5 +5,13 @@ module.exports = {
 
   css: {
     sourceMap: true
+  },
+
+  devServer: {
+    port: 3000,
+    overlay: {
+      warnings: true,
+      errors: true
+    }
   }
 };

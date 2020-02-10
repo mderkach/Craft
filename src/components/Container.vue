@@ -16,42 +16,25 @@
         <div class="blue lighten-1">
           <h2 class="text text-center">Предмет</h2>
         </div>
-        <Item :item="item" :ingridients="ingridients" />
-        <v-card outlined class="mt-12">
-          <v-card-text>
-            <h3>Инвентарь</h3>
-          </v-card-text>
-          <v-simple-table>
-            <template v-slot:default>
-              <thead>
-                <tr>
-                  <th class="text-left">Предмет</th>
-                  <th class="text-left">Количество</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr v-for="item in inventory" :key="item.name">
-                  <td>{{ item.name }}</td>
-                  <td>{{ item.countHave }}</td>
-                </tr>
-              </tbody>
-            </template>
-          </v-simple-table>
-        </v-card>
+        <Item :item="item" />
+        <Inventory :inventory="inventory" />
       </v-col>
     </v-row>
   </v-container>
 </template>
 
 <script>
+import { mapState, mapGetters } from "vuex";
 import Receipts from "./Receipts";
 import Item from "./Item";
-import { mapState } from "vuex";
+import Inventory from "./Inventory";
+
 export default {
   name: "Container",
-  components: { Receipts, Item },
+  components: { Receipts, Item, Inventory },
   computed: {
-    ...mapState(["receipts", "inventory", "ingridients", "item"])
+    ...mapState(["receipts", "inventory", "item"]),
+    ...mapGetters(["receipts", "inventory", "item"])
   }
 };
 </script>

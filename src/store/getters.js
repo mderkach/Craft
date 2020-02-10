@@ -4,9 +4,6 @@ export default {
   receipts: state => {
     return state.receipts;
   },
-  ingridients: state => {
-    return state.ingridients;
-  },
   inventory: state => {
     return state.inventory;
   },
