@@ -1,9 +1,9 @@
 <template>
-  <v-card outlined class="mt-12">
+  <v-card outlined class="mt-12" style="background-color: rgba(30,30,30, 0.35)">
     <v-card-text>
       <h3>Инвентарь</h3>
     </v-card-text>
-    <v-simple-table>
+    <v-simple-table style="background-color: rgba(30,30,30, 0.35)">
       <template v-slot:default v-if="inventory !== null">
         <thead>
           <tr>

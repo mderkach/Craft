@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container class="craft__container">
     <v-row>
       <v-col cols="12">
         <div class="text__wrapper blue lighten-1">

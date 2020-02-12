@@ -1,6 +1,6 @@
 <template>
   <div class="">
-    <v-card outlined v-if="item">
+    <v-card outlined v-if="item" style="background-color: rgba(30,30,30, 0.35)">
       <v-list-item three-line>
         <v-list-item-avatar tile size="80" color="grey">
           <v-icon v-text="item.icon"></v-icon>
@@ -39,7 +39,7 @@
           <v-list-item-title class="headline mb-1"
             >Ингридиенты</v-list-item-title
           >
-          <v-simple-table>
+          <v-simple-table style="background-color: rgba(30,30,30, 0.35)">
             <template v-slot:default>
               <thead>
                 <tr>
@@ -62,7 +62,7 @@
 
       <v-card-actions>
         <v-btn text>Создать</v-btn>
-        <v-btn text>Отменить</v-btn>
+        <v-btn text @click="reset">Отменить</v-btn>
       </v-card-actions>
     </v-card>
     <v-col v-else>
@@ -72,6 +72,8 @@
 </template>
 
 <script>
+import { mapMutations } from "vuex";
+
 export default {
   name: "Item",
   props: {
@@ -83,12 +85,19 @@ export default {
   data: () => ({
     count: 0
   }),
+  computed: {
+    ...mapMutations("set_item")
+  },
   methods: {
     decrement() {
       this.count--;
     },
     increment() {
       this.count++;
+    },
+    reset() {
+      this.item = null;
+      this.$store.commit("set_item", null);
     }
   }
 };

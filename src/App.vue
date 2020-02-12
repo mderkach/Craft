@@ -20,3 +20,15 @@ export default {
   }
 };
 </script>
+
+<style lang="sass">
+#app
+  position: absolute
+  top: 50%
+  left: 50%
+  width: 80vw
+  height: 80vh
+  margin: 0 auto
+  transform: translate(-50%, -50%)
+  background: rgba(18, 18, 18, .5)
+</style>
