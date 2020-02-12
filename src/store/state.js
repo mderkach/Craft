@@ -28,6 +28,5 @@ export default {
       count: 5
     }
   ],
-  ownedIngridients: null,
   item: null
 };

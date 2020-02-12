@@ -11,15 +11,16 @@
           }}</v-list-item-title>
           <v-list-item-subtitle>{{ item.descr }}</v-list-item-subtitle>
 
-          <v-col cols="4" class="pl-0 pr-0">
+          <v-col cols="8" class="pl-0 pr-0">
             <span class="font-weight-light">Количество: </span>
             <span class="font-weight-light" v-text="count"></span>
             <v-slider
+              v-if="calcuteCraft !== 0"
               v-model="count"
               track-color="grey"
               always-dirty
               min="0"
-              max="10"
+              :max="calcuteCraft"
             >
               <template v-slot:prepend>
                 <v-icon @click="decrement">
@@ -33,6 +34,10 @@
                 </v-icon>
               </template>
             </v-slider>
+            <p v-else class="mt-4">
+              <v-icon color="warning">mdi-alert</v-icon>
+              Недостаточно ингридиентов!
+            </p>
           </v-col>
         </v-list-item-content>
         <v-list-item-content>
@@ -86,7 +91,16 @@ export default {
     count: 0
   }),
   computed: {
-    ...mapMutations("set_item")
+    ...mapMutations(["set_item"]),
+    calcuteCraft() {
+      let total = 0;
+      let temp = [];
+      this.item.ingridients.forEach(resource => {
+        temp.push(Math.floor(resource.count / resource.quantity));
+      });
+      total = Math.min(...temp);
+      return total;
+    }
   },
   methods: {
     decrement() {

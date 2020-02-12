@@ -48,4 +48,8 @@ export default {
     width: 50%
     margin: 0 auto
     border-radius: 3rem
+
+.craft
+  &__container
+    height: 100%
 </style>

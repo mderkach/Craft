@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-content>
+    <v-content style="max-height: 100%; overflow: auto;">
       <Container />
     </v-content>
   </v-app>
@@ -31,4 +31,6 @@ export default {
   margin: 0 auto
   transform: translate(-50%, -50%)
   background: rgba(18, 18, 18, .5)
+  .v-application--wrap
+    min-height: 100%
 </style>
