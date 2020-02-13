@@ -22,15 +22,15 @@ export default {
 </script>
 
 <style lang="sass">
+html
+  overflow: hidden
 #app
-  position: absolute
-  top: 50%
-  left: 50%
+  display: none
   width: 80vw
   height: 80vh
-  margin: 0 auto
-  transform: translate(-50%, -50%)
-  background: rgba(18, 18, 18, .5)
+  background: rgba(18, 18, 18, .75)
+  &.active
+    display: block
   .v-application--wrap
     min-height: 100%
 </style>

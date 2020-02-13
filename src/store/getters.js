@@ -1,8 +1,8 @@
 // https://vuex.vuejs.org/en/getters.html
 
 export default {
-  receipts: state => {
-    return state.receipts;
+  recipes: state => {
+    return state.recipes;
   },
   inventory: state => {
     return state.inventory;

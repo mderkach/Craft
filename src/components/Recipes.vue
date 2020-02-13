@@ -23,7 +23,7 @@
 import { mapMutations, mapState } from "vuex";
 
 export default {
-  name: "Receipts",
+  name: "Recipes",
   props: {
     items: {
       type: Array,
@@ -35,7 +35,7 @@ export default {
     getItem(item) {
       this.inventory.forEach(invItem => {
         item.ingridients.forEach(ingItem => {
-          if (invItem.name === ingItem.name) {
+          if (invItem.name === ingItem.item) {
             ingItem.count = invItem.count;
             return item;
           }

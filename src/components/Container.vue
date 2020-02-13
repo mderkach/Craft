@@ -10,7 +10,7 @@
         <div class="blue lighten-1">
           <h2 class="text text-center">Рецепты</h2>
         </div>
-        <Receipts :items="receipts" />
+        <Recipes :items="recipes" />
       </v-col>
       <v-col cols="8">
         <div class="blue lighten-1">
@@ -24,17 +24,43 @@
 </template>
 
 <script>
-import { mapState, mapGetters } from "vuex";
-import Receipts from "./Receipts";
+import { mapState, mapGetters, mapMutations } from "vuex";
+import Recipes from "./Recipes";
 import Item from "./Item";
 import Inventory from "./Inventory";
 
 export default {
   name: "Container",
-  components: { Receipts, Item, Inventory },
+  components: { Recipes, Item, Inventory },
+  methods: {
+    show: data => {
+      if (data === 1) {
+        document.querySelector("#app").classList.add("active");
+      } else {
+        document.querySelector("#app").classList.remove("active");
+      }
+    }
+  },
+  mounted() {
+    window.addEventListener("message", event => {
+      this.show(event.data.show);
+      let inventory = event.data.inventory;
+      let recipes = event.data.recipes;
+
+      if (inventory) {
+        this.$store.commit("set_inventory", inventory);
+      }
+
+      if (recipes) {
+        this.$store.commit("set_recipes", recipes);
+      }
+      console.log(this.inventory, this.recipes, this.item);
+    });
+  },
   computed: {
-    ...mapState(["receipts", "inventory", "item"]),
-    ...mapGetters(["receipts", "inventory", "item"])
+    ...mapState(["recipes", "inventory", "item"]),
+    ...mapGetters(["recipes", "inventory", "item"]),
+    ...mapMutations(["set_inventory", "set_recipes"])
   }
 };
 </script>

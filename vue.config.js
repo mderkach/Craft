@@ -1,7 +1,9 @@
 module.exports = {
   transpileDependencies: ["vuetify"],
+  publicPath: "",
   assetsDir: "assets",
   runtimeCompiler: true,
+  filenameHashing: false,
 
   css: {
     sourceMap: true
