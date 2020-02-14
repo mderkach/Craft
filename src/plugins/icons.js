@@ -4,7 +4,19 @@ import {
   mdiKnifeMilitary,
   mdiHandcuffs,
   mdiGasCylinder,
-  mdiLockOpen
+  mdiLockOpen,
+  mdiRaspberryPi,
+  mdiAmmunition,
+  mdiFoodForkDrink,
+  mdiFruitCherries,
+  mdiSausage,
+  mdiBottleTonic,
+  mdiPotMix,
+  mdiCoffee,
+  mdiHamburger,
+  mdiCupcake,
+  mdiCake,
+  mdiGlassWine
 } from "@mdi/js";
 
 export default {
@@ -14,6 +26,18 @@ export default {
     mdiKnifeMilitary,
     mdiHandcuffs,
     mdiGasCylinder,
-    mdiLockOpen
+    mdiLockOpen,
+    mdiRaspberryPi,
+    mdiAmmunition,
+    mdiFoodForkDrink,
+    mdiFruitCherries,
+    mdiSausage,
+    mdiBottleTonic,
+    mdiPotMix,
+    mdiCoffee,
+    mdiHamburger,
+    mdiCupcake,
+    mdiCake,
+    mdiGlassWine
   }
 };

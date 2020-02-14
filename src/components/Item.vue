@@ -1,11 +1,11 @@
 <template>
-  <div class="">
+  <div class="item__wrapper">
     <v-card outlined v-if="item" style="background-color: rgba(30,30,30, 0.35)">
       <v-list-item three-line>
         <v-list-item-avatar tile size="80" color="grey">
           <v-icon v-text="item.icon"></v-icon>
         </v-list-item-avatar>
-        <v-list-item-content>
+        <v-list-item-content style="align-self: flex-start">
           <v-list-item-title class="headline mb-1">{{
             item.name
           }}</v-list-item-title>
@@ -40,11 +40,11 @@
             </p>
           </v-col>
         </v-list-item-content>
-        <v-list-item-content>
-          <v-list-item-title class="headline mb-1"
-            >Ингридиенты</v-list-item-title
-          >
-          <v-simple-table style="background-color: rgba(30,30,30, 0.35)">
+        <v-list-item-content style="align-self: flex-start">
+          <v-list-item-title class="headline mb-1">
+            Ингридиенты
+          </v-list-item-title>
+          <v-simple-table dense style="background-color: rgba(30,30,30, 0.35)">
             <template v-slot:default>
               <thead>
                 <tr>
@@ -55,7 +55,7 @@
               </thead>
               <tbody>
                 <tr v-for="(item, index) in item.ingridients" :key="index">
-                  <td>{{ item.descr }}</td>
+                  <td>{{ item.name }}</td>
                   <td>{{ item.quantity }}</td>
                   <td>{{ item.count }}</td>
                 </tr>
@@ -116,3 +116,35 @@ export default {
   }
 };
 </script>
+
+<style lang="sass" scoped>
+.item__wrapper
+  min-height: 306px
+  max-height: 306px
+  oveflow: auto
+  &::-webkit-scrollbar
+    margin: 0 6px
+    width: 6px
+    height: 6px
+  &::-webkit-scrollbar-button
+    width: 4px
+    height: 4px
+  &::-webkit-scrollbar-thumb
+    background: #e1e1e1
+    border: 0px none #ffffff
+    border-radius: 50px
+    &:hover
+      background: #ffffff
+    &:active
+      background: #42a5f5
+  &::-webkit-scrollbar-track
+    background: #666666
+    border: 5px none #ffffff
+    border-radius: 100px
+    &:hover
+      background: #666666
+    &:active
+      background: #ffffff
+  &::-webkit-scrollbar-corner
+    background: transparent
+</style>

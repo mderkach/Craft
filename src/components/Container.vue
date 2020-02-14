@@ -6,13 +6,13 @@
           <h1 class="text text-center">Создание предметов</h1>
         </div>
       </v-col>
-      <v-col cols="4">
+      <v-col cols="4" style="overflow: hidden">
         <div class="blue lighten-1">
           <h2 class="text text-center">Рецепты</h2>
         </div>
         <Recipes :items="recipes" />
       </v-col>
-      <v-col cols="8">
+      <v-col cols="8" style="overflow: hidden">
         <div class="blue lighten-1">
           <h2 class="text text-center">Предмет</h2>
         </div>
@@ -42,20 +42,25 @@ export default {
     }
   },
   mounted() {
-    window.addEventListener("message", event => {
-      this.show(event.data.show);
-      let inventory = event.data.inventory;
-      let recipes = event.data.recipes;
+    if (process.env.NODE_ENV !== "production") {
+      console.log("development mode");
+      document.querySelector("#app").classList.add("active");
+    } else {
+      window.addEventListener("message", event => {
+        console.log(JSON.stringify(event.data));
+        this.show(event.data.show);
+        let inventory = JSON.parse(event.data.inventory);
+        let recipes = JSON.parse(event.data.recipes);
 
-      if (inventory) {
-        this.$store.commit("set_inventory", inventory);
-      }
+        if (inventory) {
+          this.$store.commit("set_inventory", inventory);
+        }
 
-      if (recipes) {
-        this.$store.commit("set_recipes", recipes);
-      }
-      console.log(this.inventory, this.recipes, this.item);
-    });
+        if (recipes) {
+          this.$store.commit("set_recipes", recipes);
+        }
+      });
+    }
   },
   computed: {
     ...mapState(["recipes", "inventory", "item"]),

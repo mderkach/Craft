@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-content style="max-height: 100%; overflow: auto;">
+    <v-content style="max-height: 100%;">
       <Container />
     </v-content>
   </v-app>
@@ -26,11 +26,12 @@ html
   overflow: hidden
 #app
   display: none
-  width: 80vw
-  height: 80vh
+  width: 90vw
+  height: 90vh
   background: rgba(18, 18, 18, .75)
   &.active
     display: block
   .v-application--wrap
-    min-height: 100%
+    min-height: auto
+    height: 100%
 </style>
