@@ -31,8 +31,8 @@ export default {
   name: "Recipes",
   props: {
     items: {
-      type: Array,
-      default: () => []
+      type: Object,
+      default: () => {}
     }
   },
   methods: {
@@ -42,7 +42,7 @@ export default {
         if (invItem.name === "esx_item") {
           invItem.name = invItem.extra.name;
         }
-        item.ingridients.forEach(ingItem => {
+        item.ingredients.forEach(ingItem => {
           ingItem.count = 0;
           ingItem.label = null;
           if (invItem.name === ingItem.item) {
@@ -51,7 +51,6 @@ export default {
           }
         });
       });
-      console.log(item);
       return this.$store.commit("set_item", item);
     }
   },
