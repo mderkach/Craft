@@ -54,7 +54,7 @@
                 </tr>
               </thead>
               <tbody>
-                <tr v-for="(item, index) in item.ingridients" :key="index">
+                <tr v-for="(item, index) in item.ingredients" :key="index">
                   <td>{{ item.name }}</td>
                   <td>{{ item.quantity }}</td>
                   <td>{{ item.count }}</td>
@@ -95,7 +95,7 @@ export default {
     calcuteCraft() {
       let total = 0;
       let temp = [];
-      this.item.ingridients.forEach(resource => {
+      this.item.ingredients.forEach(resource => {
         temp.push(Math.floor(resource.count / resource.quantity));
       });
       total = Math.min(...temp);

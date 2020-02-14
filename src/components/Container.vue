@@ -47,10 +47,10 @@ export default {
       document.querySelector("#app").classList.add("active");
     } else {
       window.addEventListener("message", event => {
-        console.log(JSON.stringify(event.data));
+        // console.log(JSON.stringify(event.data));
         this.show(event.data.show);
-        let inventory = JSON.parse(event.data.inventory);
-        let recipes = JSON.parse(event.data.recipes);
+        let inventory = event.data.inventory.items;
+        let recipes = event.data.recipes;
 
         if (inventory) {
           this.$store.commit("set_inventory", inventory);
@@ -59,6 +59,8 @@ export default {
         if (recipes) {
           this.$store.commit("set_recipes", recipes);
         }
+
+        console.log(this.inventory, this.recipes);
       });
     }
   },
