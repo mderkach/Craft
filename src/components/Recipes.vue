@@ -5,7 +5,7 @@
         dense
         v-for="(item, i) in items"
         :key="i"
-        @click="getItem(item)"
+        @click="getItem(item, i)"
       >
         <v-list-item-icon>
           <v-icon v-text="item.icon"></v-icon>
@@ -37,7 +37,8 @@ export default {
   },
   methods: {
     ...mapMutations(["set_item"]),
-    getItem(item) {
+    getItem(item, recipe) {
+      item.recipe = recipe;
       this.inventory.forEach(invItem => {
         if (invItem.name === "esx_item") {
           invItem.name = invItem.extra.name;
@@ -51,6 +52,7 @@ export default {
           }
         });
       });
+      console.log("recipe: " + item.recipe, "item: " + item.name);
       return this.$store.commit("set_item", item);
     }
   },

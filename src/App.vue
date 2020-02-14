@@ -26,8 +26,8 @@ html
   overflow: hidden
 #app
   display: none
-  width: 90vw
-  height: 90vh
+  width: 94vw
+  height: 94vh
   background: rgba(18, 18, 18, .75)
   &.active
     display: block

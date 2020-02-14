@@ -8,7 +8,7 @@
       <h3>Инвентарь</h3>
     </v-card-text>
     <div class="table__wrapper">
-      <v-simple-table dense fixed-header height="295">
+      <v-simple-table dense fixed-header height="325">
         <template v-slot:default v-if="inventory !== null">
           <thead>
             <tr>

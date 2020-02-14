@@ -119,8 +119,8 @@ export default {
 
 <style lang="sass" scoped>
 .item__wrapper
-  min-height: 270px
-  max-height: 270px
+  min-height: 310px
+  max-height: 310px
   overflow: auto
   &::-webkit-scrollbar
     margin: 0 6px

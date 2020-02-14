@@ -4,11 +4,14 @@ module.exports = {
   assetsDir: "assets",
   runtimeCompiler: true,
   filenameHashing: false,
-
   css: {
-    sourceMap: true
+    sourceMap: true,
+    loaderOptions: {
+      sass: {
+        prependData: `@import "@/styles/_variables.sass"`
+      }
+    }
   },
-
   devServer: {
     port: 3000,
     overlay: {
