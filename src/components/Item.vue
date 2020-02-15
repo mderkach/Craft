@@ -66,7 +66,7 @@
       </v-list-item>
 
       <v-card-actions>
-        <v-btn text>Создать</v-btn>
+        <v-btn text @click="craftItem(item)">Создать</v-btn>
         <v-btn text @click="reset">Отменить</v-btn>
       </v-card-actions>
     </v-card>
@@ -77,6 +77,7 @@
 </template>
 
 <script>
+import axios from "axios";
 import { mapMutations } from "vuex";
 
 export default {
@@ -112,6 +113,13 @@ export default {
     reset() {
       this.item = null;
       this.$store.commit("set_item", null);
+    },
+    craftItem(item) {
+      if (process.env.NODE_ENV !== "production") {
+        console.log(item);
+      } else {
+        axios.post("http://vuecradt/craftItemNUI", JSON.stringify(item));
+      }
     }
   }
 };
