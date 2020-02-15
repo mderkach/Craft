@@ -66,7 +66,7 @@
       </v-list-item>
 
       <v-card-actions>
-        <v-btn text @click="craftItem(item)">Создать</v-btn>
+        <v-btn text @click="craftItem(item, this.count)">Создать</v-btn>
         <v-btn text @click="reset">Отменить</v-btn>
       </v-card-actions>
     </v-card>
@@ -114,11 +114,14 @@ export default {
       this.item = null;
       this.$store.commit("set_item", null);
     },
-    craftItem(item) {
+    craftItem(item, craftingCount) {
       if (process.env.NODE_ENV !== "production") {
         console.log(item);
       } else {
-        axios.post("http://vuecradt/craftItemNUI", JSON.stringify(item));
+        axios.post(
+          "http://vuecraft/craftItemNUI",
+          JSON.stringify(item, craftingCount)
+        );
       }
     }
   }
