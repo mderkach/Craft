@@ -6,11 +6,12 @@
           <v-icon v-text="item.icon"></v-icon>
         </v-list-item-avatar>
         <v-list-item-content style="align-self: flex-start">
-          <v-list-item-title class="headline mb-1">{{
-            item.name
-          }}</v-list-item-title>
-          <v-list-item-subtitle>{{ item.descr }}</v-list-item-subtitle>
-
+          <v-list-item-title class="headline mb-1">
+            {{ item.name }}
+          </v-list-item-title>
+          <v-list-item-subtitle>
+            {{ item.descr }}
+          </v-list-item-subtitle>
           <v-col cols="8" class="pl-0 pr-0">
             <span class="font-weight-light">Количество: </span>
             <span class="font-weight-light" v-text="count"></span>
@@ -66,7 +67,7 @@
       </v-list-item>
 
       <v-card-actions>
-        <v-btn text @click="craftItem(item, this.count)">Создать</v-btn>
+        <v-btn text @click="craftItem(count, item)">Создать</v-btn>
         <v-btn text @click="reset">Отменить</v-btn>
       </v-card-actions>
     </v-card>
@@ -114,14 +115,12 @@ export default {
       this.item = null;
       this.$store.commit("set_item", null);
     },
-    craftItem(item, craftingCount) {
+    craftItem(craftingCount, item) {
+      item.toCraft = craftingCount;
       if (process.env.NODE_ENV !== "production") {
-        console.log(item);
+        console.log(JSON.stringify(item));
       } else {
-        axios.post(
-          "http://vuecraft/craftItemNUI",
-          JSON.stringify(item, craftingCount)
-        );
+        axios.post("http://vuecraft/craftItemNUI", JSON.stringify(item));
       }
     }
   }
