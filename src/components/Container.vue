@@ -60,7 +60,9 @@ export default {
           this.$store.commit("set_recipes", recipes);
         }
 
-        console.log(this.inventory, this.recipes);
+        // console.log(this.inventory, this.recipes);
+        console.log(JSON.stringify(this.inventory));
+        console.log(JSON.stringify(this.recipes));
       });
     }
   },

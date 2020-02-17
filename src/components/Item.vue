@@ -98,6 +98,9 @@ export default {
       let total = 0;
       let temp = [];
       this.item.ingredients.forEach(resource => {
+        if (!resource.count) {
+          resource.count = 0;
+        }
         temp.push(Math.floor(resource.count / resource.quantity));
       });
       total = Math.min(...temp);

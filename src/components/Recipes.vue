@@ -44,7 +44,6 @@ export default {
           invItem.name = invItem.extra.name;
         }
         item.ingredients.forEach(ingItem => {
-          ingItem.count = 0;
           ingItem.label = null;
           if (invItem.name === ingItem.item) {
             ingItem.count = invItem.amount;
@@ -52,7 +51,6 @@ export default {
           }
         });
       });
-      console.log("recipe: " + item.recipe, "item: " + item.name);
       return this.$store.commit("set_item", item);
     }
   },
