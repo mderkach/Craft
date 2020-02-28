@@ -48,7 +48,7 @@ export default {
       if (process.env.NODE_ENV !== "production") {
         console.log("close");
       } else {
-        axios.post("http://vuecraft/сlose", JSON.stringify({}));
+        axios.post("http://vuecraft/NUIClose", JSON.stringify({}));
       }
     }
   },
@@ -60,20 +60,22 @@ export default {
       window.addEventListener("message", event => {
         // console.log(JSON.stringify(event.data));
         this.show(event.data.show);
-        let inventory = event.data.inventory.items;
-        let recipes = event.data.recipes;
+        if (event.data.show !== 0) {
+          let inventory = event.data.inventory.items;
+          let recipes = event.data.recipes;
 
-        if (inventory) {
-          this.$store.commit("set_inventory", inventory);
-        }
+          if (inventory) {
+            this.$store.commit("set_inventory", inventory);
+          }
 
-        if (recipes) {
-          this.$store.commit("set_recipes", recipes);
+          if (recipes) {
+            this.$store.commit("set_recipes", recipes);
+          }
         }
 
         // console.log(this.inventory, this.recipes);
-        console.log(JSON.stringify(this.inventory));
-        console.log(JSON.stringify(this.recipes));
+        // console.log(JSON.stringify(this.inventory));
+        // console.log(JSON.stringify(this.recipes));
       });
     }
   },
