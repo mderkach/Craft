@@ -16,7 +16,8 @@ import {
   mdiHamburger,
   mdiCupcake,
   mdiCake,
-  mdiGlassWine
+  mdiGlassWine,
+  mdiClose
 } from "@mdi/js";
 
 export default {
@@ -38,6 +39,7 @@ export default {
     mdiHamburger,
     mdiCupcake,
     mdiCake,
-    mdiGlassWine
+    mdiGlassWine,
+    mdiClose
   }
 };

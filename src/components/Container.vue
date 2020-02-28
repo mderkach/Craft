@@ -20,11 +20,15 @@
         <Inventory :inventory="inventory" />
       </v-col>
     </v-row>
+    <v-btn @click="close" class="close">
+      <v-icon>mdi-close</v-icon>
+    </v-btn>
   </v-container>
 </template>
 
 <script>
 import { mapState, mapGetters, mapMutations } from "vuex";
+import axios from "axios";
 import Recipes from "./Recipes";
 import Item from "./Item";
 import Inventory from "./Inventory";
@@ -38,6 +42,13 @@ export default {
         document.querySelector("#app").classList.add("active");
       } else {
         document.querySelector("#app").classList.remove("active");
+      }
+    },
+    close: () => {
+      if (process.env.NODE_ENV !== "production") {
+        console.log("close");
+      } else {
+        axios.post("http://vuecraft/сlose", JSON.stringify({}));
       }
     }
   },
@@ -87,4 +98,9 @@ export default {
 .craft
   &__container
     height: 100%
+
+.close
+  position: absolute
+  top: 10px
+  right: 10px
 </style>
