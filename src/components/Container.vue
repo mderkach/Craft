@@ -78,6 +78,12 @@ export default {
         // console.log(JSON.stringify(this.recipes));
       });
     }
+
+    document.addEventListener("keydown", event => {
+      if (event.keyCode === 27) {
+        this.close();
+      }
+    });
   },
   computed: {
     ...mapState(["recipes", "inventory", "item"]),
