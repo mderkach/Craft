@@ -22,13 +22,14 @@ export default {
 </script>
 
 <style lang="sass">
-html
-  overflow: hidden
+html, body
+  overflow: hidden !important
 #app
   display: none
   width: 94vw
   height: 94vh
   background: rgba(18, 18, 18, .75)
+  overflow: hidden !important
   &.active
     display: block
   .v-application--wrap

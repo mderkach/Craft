@@ -1,18 +1,18 @@
 <template>
-  <v-container class="craft__container">
+  <v-container class="craft__container py-0">
     <v-row>
-      <v-col cols="12">
+      <v-col class="py-2" cols="12">
         <div class="text__wrapper blue lighten-1">
           <h1 class="text text-center">Создание предметов</h1>
         </div>
       </v-col>
-      <v-col cols="4" style="overflow: hidden">
+      <v-col class="py-0" cols="4" style="overflow: hidden">
         <div class="blue lighten-1">
           <h2 class="text text-center">Рецепты</h2>
         </div>
         <Recipes :items="recipes" />
       </v-col>
-      <v-col cols="8" style="overflow: hidden">
+      <v-col class="py-0" cols="8" style="overflow: hidden">
         <div class="blue lighten-1">
           <h2 class="text text-center">Предмет</h2>
         </div>

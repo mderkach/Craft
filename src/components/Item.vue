@@ -37,19 +37,19 @@
             </v-slider>
             <p v-else class="mt-4">
               <v-icon color="warning">mdi-alert</v-icon>
-              Недостаточно ингридиентов!
+              Недостаточно ингредиентов!
             </p>
           </v-col>
         </v-list-item-content>
         <v-list-item-content style="align-self: flex-start">
           <v-list-item-title class="headline mb-1">
-            Ингридиенты
+            ингредиенты
           </v-list-item-title>
           <v-simple-table dense style="background-color: rgba(30,30,30, 0.35)">
             <template v-slot:default>
               <thead>
                 <tr>
-                  <th class="text-left">Ингридиент</th>
+                  <th class="text-left">ингредиент</th>
                   <th class="text-left">Необходимо</th>
                   <th class="text-left">В наличии</th>
                 </tr>

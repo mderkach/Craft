@@ -8,7 +8,7 @@
       <h3>Инвентарь</h3>
     </v-card-text>
     <div class="table__wrapper">
-      <v-simple-table dense fixed-header height="325">
+      <v-simple-table dense fixed-header>
         <template v-slot:default v-if="inventory !== null">
           <thead>
             <tr>
@@ -77,4 +77,7 @@ export default {
         background: #ffffff
     &::-webkit-scrollbar-corner
       background: transparent
+  .v-data-table__wrapper
+    height: 100%
+    max-height: 325px
 </style>
