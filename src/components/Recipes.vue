@@ -7,9 +7,7 @@
         :key="i"
         @click="getItem(item, i)"
       >
-        <v-list-item-icon>
-          <v-icon v-text="item.icon"></v-icon>
-        </v-list-item-icon>
+        <div class="icon" v-html="renderIcon(item)"></div>
         <v-list-item-content two-line>
           <v-list-item-title v-text="item.name"></v-list-item-title>
           <v-list-item-subtitle v-text="item.descr"></v-list-item-subtitle>
@@ -26,6 +24,7 @@
 
 <script>
 import { mapMutations, mapState } from "vuex";
+import icons from "../plugins/icons";
 
 export default {
   name: "Recipes",
@@ -35,6 +34,7 @@ export default {
       default: () => {}
     }
   },
+  mixins: [icons],
   methods: {
     ...mapMutations(["set_item"]),
     getItem(item, recipe) {
@@ -52,6 +52,14 @@ export default {
         });
       });
       return this.$store.commit("set_item", item);
+    },
+    renderIcon(item) {
+      this.icons.forEach(icon => {
+        if (item.icon === icon.name) {
+          item.icon = icon.icon;
+        }
+      });
+      return item.icon;
     }
   },
   computed: {
@@ -60,7 +68,13 @@ export default {
 };
 </script>
 
-<style lang="sass" scoped>
+<style lang="sass">
+.icon
+  width: 30px
+  height: 30px
+  margin-right: 10px
+  img
+    width: 100%
 .recipes__wrapper
   height: 100%
   max-height: 736px

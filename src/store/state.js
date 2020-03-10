@@ -2,309 +2,2145 @@
 
 export default {
   recipes: {
-    // blowtorch: {
-    //   descr: "И светит, и паяет",
-    //   icon: "mdi-gas-cylinder",
-    //   ingredients: [
-    //     { name: "Газовый баллон", quantity: 1, item: "gazbottle" },
-    //     { name: "Хлам", quantity: 1, item: "scrap" },
-    //     { name: "Зажигалка", quantity: 1, item: "ignite" }
-    //   ],
-    //   type: "tool",
-    //   name: "Паяльная лампа"
-    // },
-    // spagettchee: {
-    //   descr: "",
-    //   icon: "mdi-pot-mix",
-    //   ingredients: [
-    //     { name: "Спагетти", quantity: 1, item: "spagetti" },
-    //     { name: "Сыр", quantity: 1, item: "cheese" }
-    //   ],
-    //   type: "food",
-    //   name: "Спагетти с сыром"
-    // },
-    // obed2: {
-    //   descr: "Кто не любит мясо?",
-    //   icon: "mdi-pot-mix",
-    //   ingredients: [
-    //     { name: "Специи", quantity: 2, item: "spices" },
-    //     { name: "Куриное филе", quantity: 1, item: "packaged_chicken" },
-    //     { name: "Картофель", quantity: 1, item: "potato" }
-    //   ],
-    //   type: "food",
-    //   name: "Блюдо с мясом"
-    // },
-    // "3adic": {
-    //   descr: "Да, не одеколон, так еще и тройной!",
-    //   icon: "mdi-bottle-tonic",
-    //   ingredients: [{ name: "Адикалон", quantity: 3, item: "adicalone" }],
-    //   type: "drink",
-    //   name: "Тройной Адикалон"
-    // },
-    // puree: {
-    //   descr: "",
-    //   icon: "mdi-pot-mix",
-    //   ingredients: [
-    //     { name: "Картофель", quantity: 1, item: "potato" },
-    //     { name: "Молоко", quantity: 1, item: "milk" }
-    //   ],
-    //   type: "food",
-    //   name: "Пюре"
-    // },
-    // spagettimeat: {
-    //   descr: "",
-    //   icon: "mdi-pot-mix",
-    //   ingredients: [
-    //     { name: "Макароны", quantity: 1, item: "spagetti" },
-    //     { name: "Вода", quantity: 1, item: "water" },
-    //     { name: "Сосиска", quantity: 1, item: "saucisson" }
-    //   ],
-    //   type: "food",
-    //   name: "Макарошки с сосисками"
-    // },
-    // fruitpot: {
-    //   descr: "Фрукты на любой вкус",
-    //   icon: "mdi-fruit-cherries",
-    //   ingredients: [
-    //     { name: "Клубника", quantity: 1, item: "strawberry" },
-    //     { name: "Банан", quantity: 1, item: "banana" },
-    //     { name: "Яблоко", quantity: 1, item: "apple" }
-    //   ],
-    //   type: "food",
-    //   name: "Фруктовый салат"
-    // },
-    // raspberry: {
-    //   descr: "Вскрывает электронные замки, в т.ч. дорогих авто",
-    //   icon: "mdi-raspberry-pi",
-    //   ingredients: [
-    //     { name: "Хлам", quantity: 2, item: "scrap" },
-    //     { name: "Звуковая система", quantity: 1, item: "highradio" }
-    //   ],
-    //   type: "tool",
-    //   name: "Устройство взлома"
-    // },
-    // meats: {
-    //   descr: "",
-    //   icon: "mdi-pot-mix",
-    //   ingredients: [
-    //     { name: "Куриное филе", quantity: 1, item: "packaged_chicken" },
-    //     { name: "Специи", quantity: 1, item: "spices" }
-    //   ],
-    //   type: "food",
-    //   name: "Котлеты"
-    // },
-    // pureemeat: {
-    //   descr: "",
-    //   icon: "mdi-pot-mix",
-    //   ingredients: [
-    //     { name: "Пюре", quantity: 1, item: "puree" },
-    //     { name: "Котлеты", quantity: 1, item: "meats" }
-    //   ],
-    //   type: "food",
-    //   name: "Котлетки с пюрешкой"
-    // },
-    // weapon_machinepistol: {
-    //   descr: "",
-    //   ingredients: [
-    //     { name: "Хлам", quantity: 2, item: "scrap" },
-    //     { name: "Железо", quantity: 3, item: "iron" },
-    //     { name: "Пластик", quantity: 3, item: "airbag" }
-    //   ],
-    //   icon: "mdi-pistol",
-    //   ammo: 40,
-    //   type: "weapon",
-    //   name: "микро ПП"
-    // },
-    // chocodrink: {
-    //   descr: "Горячо и вкусно",
-    //   icon: "mdi-coffee",
-    //   ingredients: [
-    //     { name: "Вода", quantity: 1, item: "water" },
-    //     { name: "Шоколад", quantity: 1, item: "candy2" }
-    //   ],
-    //   type: "drink",
-    //   name: "Горячий шоколад"
-    // },
-    // ammo_pistol: {
-    //   descr: "",
-    //   icon: "mdi-ammunition",
-    //   ingredients: [{ name: "Хлам", quantity: 1, item: "scrap" }],
-    //   type: "ammo",
-    //   name: "Пистолетная обойма"
-    // },
-    // lockpick: {
-    //   descr: "Вскрывает замки и простые автомобили",
-    //   icon: "mdi-lock-open",
-    //   ingredients: [{ name: "Хлам", quantity: 2, item: "scrap" }],
-    //   type: "tool",
-    //   name: "Отмычка"
-    // },
-    // hotdog: {
-    //   descr: "Нет, это не горячая собака",
-    //   icon: "mdi-sausage",
-    //   ingredients: [
-    //     { name: "Хлеб", quantity: 1, item: "bread" },
-    //     { name: "Сосиска", quantity: 1, item: "saucisson" }
-    //   ],
-    //   type: "food",
-    //   name: "Хот-дог"
-    // },
-    // weapon_bottle: {
-    //   descr: "",
-    //   icon: "mdi-bottle-soda-classic-outline",
-    //   ingredients: [{ name: "Бутылка", quantity: 1, item: "bottle" }],
-    //   type: "weapon",
-    //   name: "Розочка"
-    // },
-    // obed3: {
-    //   descr: "Просто суп",
-    //   icon: "mdi-pot-mix",
-    //   ingredients: [
-    //     { name: "Специи", quantity: 2, item: "spices" },
-    //     { name: "Куриное филе", quantity: 1, item: "packaged_chicken" },
-    //     { name: "Картофель", quantity: 1, item: "potato" },
-    //     { name: "Капуста", quantity: 1, item: "сabbage" },
-    //     { name: "Вода", quantity: 1, item: "water" },
-    //     { name: "Морковь", quantity: 1, item: "carrot" }
-    //   ],
-    //   type: "food",
-    //   name: "Суп"
-    // },
-    // obed1: {
-    //   descr: "Любителям рыбки",
-    //   icon: "mdi-pot-mix",
-    //   ingredients: [
-    //     { name: "Специи", quantity: 2, item: "spices" },
-    //     { name: "Рыба", quantity: 1, item: "fish" },
-    //     { name: "Картофель", quantity: 1, item: "potato" }
-    //   ],
-    //   type: "food",
-    //   name: "Рыбное блюдо"
-    // },
-    // weapon_molotov: {
-    //   descr: "",
-    //   icon: "mdi-fire",
-    //   ingredients: [
-    //     { name: "Масло", quantity: 1, item: "petrol" },
-    //     { name: "Бутылка", quantity: 1, item: "bottle" },
-    //     { name: "Зажигалка", quantity: 1, item: "ignite" }
-    //   ],
-    //   type: "throwable",
-    //   name: "Коктейль Молотова"
-    // },
-    // ammo_smg: {
-    //   descr: "",
-    //   icon: "mdi-ammunition",
-    //   ingredients: [{ name: "Хлам", quantity: 1, item: "scrap" }],
-    //   type: "ammo",
-    //   name: "Обойма ПП"
-    // },
-    // sendwich1: {
-    //   descr: "",
-    //   icon: "mdi-hamburger",
-    //   ingredients: [
-    //     { name: "Специи", quantity: 1, item: "spices" },
-    //     { name: "Куриное филе", quantity: 1, item: "packaged_chicken" },
-    //     { name: "Сыр", quantity: 1, item: "cheese" },
-    //     { name: "Капуста", quantity: 1, item: "сabbage" }
-    //   ],
-    //   type: "food",
-    //   name: "Сендвич с курицей"
-    // },
-    // glint: {
-    //   descr: "",
-    //   icon: "mdi-glass-wine",
-    //   ingredients: [
-    //     { name: "Специи", quantity: 1, item: "spices" },
-    //     { name: "Столовое вино", quantity: 1, item: "vine" }
-    //   ],
-    //   type: "drink",
-    //   name: "Глинтвейн"
-    // },
-    // ammo_shotgun: {
-    //   descr: "",
-    //   icon: "mdi-ammunition",
-    //   ingredients: [{ name: "Хлам", quantity: 1, item: "scrap" }],
-    //   type: "ammo",
-    //   name: "Патроны дробовика"
-    // },
-    // patao: {
-    //   descr: "",
-    //   icon: "mdi-pot-mix",
-    //   ingredients: [
-    //     { name: "Картофель", quantity: 1, item: "potato" },
-    //     { name: "Специи", quantity: 1, item: "spices" }
-    //   ],
-    //   type: "food",
-    //   name: "Жареная картошка"
-    // },
-    // ammo_rifle: {
-    //   descr: "",
-    //   icon: "mdi-ammunition",
-    //   ingredients: [{ name: "Хлам", quantity: 1, item: "scrap" }],
-    //   type: "ammo",
-    //   name: "Обойма винтовки"
-    // },
-    // cake: {
-    //   descr: "",
-    //   icon: "mdi-cupcake",
-    //   ingredients: [
-    //     { name: "Молоко", quantity: 1, item: "milk" },
-    //     { name: "Мука", quantity: 1, item: "flour" },
-    //     { name: "Сахар", quantity: 1, item: "sugar" },
-    //     { name: "Шоколад", quantity: 1, item: "candy2" }
-    //   ],
-    //   type: "food",
-    //   name: "Кекс"
-    // },
-    // slivstraw: {
-    //   descr: "Мммм, вкусно!",
-    //   icon: "mdi-food-fork-drink",
-    //   ingredients: [
-    //     { name: "Клубника", quantity: 1, item: "strawberry" },
-    //     { name: "Сливки", quantity: 1, item: "slivki" }
-    //   ],
-    //   type: "food",
-    //   name: "Клубника со сливками"
-    // },
-    // clip: {
-    //   descr: "Просто обойма",
-    //   icon: "mdi-ammunition",
-    //   ingredients: [
-    //     { name: "Хлам", quantity: 1, item: "scrap" },
-    //     { name: "Железо", quantity: 2, item: "iron" },
-    //     { name: "Пластик", quantity: 1, item: "airbag" }
-    //   ],
-    //   type: "ammo",
-    //   name: "Обойма"
-    // },
-    // cakebig: {
-    //   descr: "",
-    //   icon: "mdi-cake",
-    //   ingredients: [
-    //     { name: "Молоко", quantity: 1, item: "milk" },
-    //     { name: "Мука", quantity: 2, item: "flour" },
-    //     { name: "Сахар", quantity: 1, item: "sugar" },
-    //     { name: "Шоколад", quantity: 1, item: "candy2" },
-    //     { name: "Банан", quantity: 1, item: "banana" },
-    //     { name: "Сливки", quantity: 1, item: "slivki" },
-    //     { name: "Яйца", quantity: 2, item: "eggs" }
-    //   ],
-    //   type: "food",
-    //   name: "Торт"
-    // },
-    // weapon_snspistol: {
-    //   descr: "",
-    //   ingredients: [
-    //     { name: "Хлам", quantity: 2, item: "scrap" },
-    //     { name: "Железо", quantity: 2, item: "iron" },
-    //     { name: "Пластик", quantity: 2, item: "airbag" }
-    //   ],
-    //   icon: "mdi-pistol",
-    //   ammo: 20,
-    //   type: "weapon",
-    //   name: "Карманный пистолет"
-    // }
+    patao: {
+      ingredients: [
+        {
+          item: "potato",
+          name: "Картофель",
+          quantity: 1
+        },
+        {
+          item: "spices",
+          name: "Специи",
+          quantity: 1
+        }
+      ],
+      descr: "",
+      name: "Жареная картошка",
+      type: "food",
+      needsRecipe: false,
+      icon: "friedpotato"
+    },
+    pureefish: {
+      ingredients: [
+        {
+          item: "puree",
+          name: "Пюре",
+          quantity: 1
+        },
+        {
+          item: "cutletfish",
+          name: "Котлета рыбная",
+          quantity: 1
+        }
+      ],
+      descr: "",
+      name: "Пюре с котлетой (рыбной)",
+      type: "food",
+      needsRecipe: false,
+      icon: "pureemeat"
+    },
+    orangejuice: {
+      ingredients: [
+        {
+          item: "orange",
+          name: "Апельсин",
+          quantity: 1
+        },
+        {
+          item: "water",
+          name: "Вода",
+          quantity: 1
+        }
+      ],
+      descr: "",
+      name: "Сок апельсиновый",
+      type: "drink",
+      needsRecipe: false,
+      icon: "juice"
+    },
+    pizzachicken: {
+      ingredients: [
+        {
+          item: "salt",
+          name: "Соль",
+          quantity: 1
+        },
+        {
+          item: "dough",
+          name: "Тесто",
+          quantity: 2
+        },
+        {
+          item: "cheese",
+          name: "Сыр",
+          quantity: 2
+        },
+        {
+          item: "mushrooms",
+          name: "Грибы",
+          quantity: 3
+        },
+        {
+          item: "tomatoes",
+          name: "Томаты",
+          quantity: 2
+        },
+        {
+          item: "onion",
+          name: "Лук",
+          quantity: 1
+        },
+        {
+          item: "tomatopaste",
+          name: "Томатная паста",
+          quantity: 1
+        },
+        {
+          item: "packaged_chicken",
+          name: "Куриное филе",
+          quantity: 2
+        }
+      ],
+      descr: "",
+      name: "Пицца c курицей",
+      type: "food",
+      needsRecipe: false,
+      icon: "pizza"
+    },
+    glint: {
+      ingredients: [
+        {
+          item: "spices",
+          name: "Специи",
+          quantity: 1
+        },
+        {
+          item: "vine",
+          name: "Столовое вино",
+          quantity: 1
+        }
+      ],
+      descr: "",
+      name: "Глинтвейн",
+      type: "drink",
+      needsRecipe: false,
+      icon: "glint"
+    },
+    mincedbeef: {
+      ingredients: [
+        {
+          item: "beef",
+          name: "Говядина",
+          quantity: 2
+        },
+        {
+          item: "salt",
+          name: "Соль",
+          quantity: 1
+        },
+        {
+          item: "eggs",
+          name: "Яйца",
+          quantity: 1
+        },
+        {
+          item: "bread",
+          name: "Хлеб",
+          quantity: 1
+        }
+      ],
+      descr: "",
+      name: "Фарш говяжий",
+      type: "food",
+      needsRecipe: false,
+      icon: "mince"
+    },
+    chococake: {
+      ingredients: [
+        {
+          item: "dough",
+          name: "Тесто",
+          quantity: 2
+        },
+        {
+          item: "sugar",
+          name: "Сахар",
+          quantity: 1
+        },
+        {
+          item: "candy2",
+          name: "Шоколад",
+          quantity: 3
+        },
+        {
+          item: "strawberry",
+          name: "Клубника",
+          quantity: 2
+        },
+        {
+          item: "salt",
+          name: "Соль",
+          quantity: 1
+        },
+        {
+          item: "eggs",
+          name: "Яйца",
+          quantity: 2
+        }
+      ],
+      descr: "",
+      name: "Шоколадный торт с клубникой",
+      type: "food",
+      needsRecipe: false,
+      icon: "chococake"
+    },
+    cutletpork: {
+      ingredients: [
+        {
+          item: "mincedpork",
+          name: "Фарш свиной",
+          quantity: 1
+        },
+        {
+          item: "spices",
+          name: "Специи",
+          quantity: 2
+        }
+      ],
+      descr: "",
+      name: "Котлета свиная",
+      type: "food",
+      needsRecipe: false,
+      icon: "cutlet"
+    },
+    fruitpot: {
+      ingredients: [
+        {
+          item: "strawberry",
+          name: "Клубника",
+          quantity: 1
+        },
+        {
+          item: "banana",
+          name: "Банан",
+          quantity: 1
+        },
+        {
+          item: "apple",
+          name: "Яблоко",
+          quantity: 1
+        }
+      ],
+      descr: "Фрукты на любой вкус",
+      name: "Фруктовый салат",
+      type: "food",
+      needsRecipe: false,
+      icon: "fruitpot"
+    },
+    "3adic": {
+      ingredients: [
+        {
+          item: "adicalone",
+          name: "Адикалон",
+          quantity: 3
+        }
+      ],
+      descr: "Да, не одеколон, так еще и тройной!",
+      name: "Тройной Адикалон",
+      type: "drink",
+      needsRecipe: false,
+      icon: "parfum"
+    },
+    mincedchicken: {
+      ingredients: [
+        {
+          item: "packaged_chicken",
+          name: "Куриное филе",
+          quantity: 2
+        },
+        {
+          item: "salt",
+          name: "Соль",
+          quantity: 1
+        },
+        {
+          item: "eggs",
+          name: "Яйца",
+          quantity: 1
+        },
+        {
+          item: "bread",
+          name: "Хлеб",
+          quantity: 1
+        }
+      ],
+      descr: "",
+      name: "Фарш куриный",
+      type: "food",
+      needsRecipe: false,
+      icon: "mince"
+    },
+    peachjuice: {
+      ingredients: [
+        {
+          item: "peach",
+          name: "Персик",
+          quantity: 1
+        },
+        {
+          item: "water",
+          name: "Вода",
+          quantity: 1
+        }
+      ],
+      descr: "",
+      name: "Сок персиковый",
+      type: "drink",
+      needsRecipe: false,
+      icon: "juice"
+    },
+    applejuice: {
+      ingredients: [
+        {
+          item: "apple",
+          name: "Яблоко",
+          quantity: 1
+        },
+        {
+          item: "water",
+          name: "Вода",
+          quantity: 1
+        }
+      ],
+      descr: "",
+      name: "Сок яблочный",
+      type: "drink",
+      needsRecipe: false,
+      icon: "juice"
+    },
+    mincehouse: {
+      ingredients: [
+        {
+          item: "mincedchicken",
+          name: "Фарш куриный",
+          quantity: 1
+        },
+        {
+          item: "mincedbeef",
+          name: "Фарш говяжий",
+          quantity: 1
+        },
+        {
+          item: "mincedpork",
+          name: "Фарш свиной",
+          quantity: 1
+        },
+        {
+          item: "salt",
+          name: "Соль",
+          quantity: 1
+        },
+        {
+          item: "eggs",
+          name: "Яйца",
+          quantity: 1
+        },
+        {
+          item: "bread",
+          name: "Хлеб",
+          quantity: 1
+        }
+      ],
+      descr: "",
+      name: "Фарш домашний",
+      type: "food",
+      needsRecipe: false,
+      icon: "mince"
+    },
+    icecreampeach: {
+      ingredients: [
+        {
+          item: "icecream",
+          name: "Мороженое",
+          quantity: 1
+        },
+        {
+          item: "peach",
+          name: "Персик",
+          quantity: 1
+        }
+      ],
+      descr: "",
+      name: "Персиковое мороженое",
+      type: "food",
+      needsRecipe: false,
+      icon: "icecream2"
+    },
+    spagettisausage: {
+      ingredients: [
+        {
+          item: "spagetti",
+          name: "Макароны",
+          quantity: 1
+        },
+        {
+          item: "water",
+          name: "Вода",
+          quantity: 1
+        },
+        {
+          item: "saucisson",
+          name: "Сосиски",
+          quantity: 3
+        },
+        {
+          item: "salt",
+          name: "Соль",
+          quantity: 1
+        }
+      ],
+      descr: "",
+      name: "Макароны с Сосискими",
+      type: "food",
+      needsRecipe: false,
+      icon: "spagettisausage"
+    },
+    cakebig: {
+      ingredients: [
+        {
+          item: "milk",
+          name: "Молоко",
+          quantity: 1
+        },
+        {
+          item: "flour",
+          name: "Мука",
+          quantity: 2
+        },
+        {
+          item: "sugar",
+          name: "Сахар",
+          quantity: 1
+        },
+        {
+          item: "candy2",
+          name: "Шоколад",
+          quantity: 1
+        },
+        {
+          item: "banana",
+          name: "Банан",
+          quantity: 1
+        },
+        {
+          item: "slivki",
+          name: "Сливки",
+          quantity: 1
+        },
+        {
+          item: "eggs",
+          name: "Яйца",
+          quantity: 2
+        }
+      ],
+      descr: "",
+      name: "Торт",
+      type: "food",
+      needsRecipe: false,
+      icon: "birthdaycake"
+    },
+    buffalowings: {
+      ingredients: [
+        {
+          item: "spices",
+          name: "Специи",
+          quantity: 1
+        },
+        {
+          item: "salt",
+          name: "Соль",
+          quantity: 1
+        },
+        {
+          item: "pepper",
+          name: "Перец",
+          quantity: 1
+        },
+        {
+          item: "packaged_chicken",
+          name: "Куриное филе",
+          quantity: 1
+        }
+      ],
+      descr: "",
+      name: "Крылышки 'Баффало'",
+      type: "food",
+      needsRecipe: false,
+      icon: "chickenwings"
+    },
+    hodgepodge: {
+      ingredients: [
+        {
+          item: "water",
+          name: "Вода",
+          quantity: 1
+        },
+        {
+          item: "beef",
+          name: "Говядина",
+          quantity: 1
+        },
+        {
+          item: "lemon",
+          name: "Лимон",
+          quantity: 1
+        },
+        {
+          item: "carrot",
+          name: "Морковь",
+          quantity: 1
+        },
+        {
+          item: "saucisson",
+          name: "Сосиски",
+          quantity: 1
+        },
+        {
+          item: "onion",
+          name: "Лук",
+          quantity: 1
+        },
+        {
+          item: "bacon",
+          name: "Бекон",
+          quantity: 1
+        },
+        {
+          item: "salt",
+          name: "Соль",
+          quantity: 1
+        }
+      ],
+      descr: "",
+      name: "Солянка",
+      type: "food",
+      needsRecipe: false,
+      icon: "soup"
+    },
+    pureebeef: {
+      ingredients: [
+        {
+          item: "puree",
+          name: "Пюре",
+          quantity: 1
+        },
+        {
+          item: "cutletbeef",
+          name: "Котлета говяжья",
+          quantity: 1
+        }
+      ],
+      descr: "",
+      name: "Пюре с котлетой (говяжьей)",
+      type: "food",
+      needsRecipe: false,
+      icon: "pureemeat"
+    },
+    mincedfish: {
+      ingredients: [
+        {
+          item: "fish",
+          name: "Рыба",
+          quantity: 2
+        },
+        {
+          item: "salt",
+          name: "Соль",
+          quantity: 1
+        },
+        {
+          item: "eggs",
+          name: "Яйца",
+          quantity: 1
+        },
+        {
+          item: "bread",
+          name: "Хлеб",
+          quantity: 1
+        }
+      ],
+      descr: "",
+      name: "Фарш рыбный",
+      type: "food",
+      needsRecipe: false,
+      icon: "mince"
+    },
+    spagettifish: {
+      ingredients: [
+        {
+          item: "spagetti",
+          name: "Макароны",
+          quantity: 1
+        },
+        {
+          item: "water",
+          name: "Вода",
+          quantity: 1
+        },
+        {
+          item: "salt",
+          name: "Соль",
+          quantity: 1
+        },
+        {
+          item: "cutletfish",
+          name: "Котлета рыбная",
+          quantity: 1
+        }
+      ],
+      descr: "",
+      name: "Макароны с котлетой (рыбной)",
+      type: "food",
+      needsRecipe: false,
+      icon: "spaghettimeat"
+    },
+    mincedpork: {
+      ingredients: [
+        {
+          item: "pork",
+          name: "Свинина",
+          quantity: 2
+        },
+        {
+          item: "salt",
+          name: "Соль",
+          quantity: 1
+        },
+        {
+          item: "eggs",
+          name: "Яйца",
+          quantity: 1
+        },
+        {
+          item: "bread",
+          name: "Хлеб",
+          quantity: 1
+        }
+      ],
+      descr: "",
+      name: "Фарш свиной",
+      type: "food",
+      needsRecipe: false,
+      icon: "mince"
+    },
+    obed2: {
+      ingredients: [
+        {
+          item: "spices",
+          name: "Специи",
+          quantity: 2
+        },
+        {
+          item: "packaged_chicken",
+          name: "Куриное филе",
+          quantity: 1
+        },
+        {
+          item: "potato",
+          name: "Картофель",
+          quantity: 1
+        }
+      ],
+      descr: "Кто не любит мясо?",
+      name: "Блюдо с мясом",
+      type: "food",
+      needsRecipe: false,
+      icon: "meatfood"
+    },
+    obed3: {
+      ingredients: [
+        {
+          item: "spices",
+          name: "Специи",
+          quantity: 2
+        },
+        {
+          item: "packaged_chicken",
+          name: "Куриное филе",
+          quantity: 1
+        },
+        {
+          item: "potato",
+          name: "Картофель",
+          quantity: 1
+        },
+        {
+          item: "сabbage",
+          name: "Капуста",
+          quantity: 1
+        },
+        {
+          item: "water",
+          name: "Вода",
+          quantity: 1
+        },
+        {
+          item: "carrot",
+          name: "Морковь",
+          quantity: 1
+        }
+      ],
+      descr: "Просто суп",
+      name: "Суп",
+      type: "food",
+      needsRecipe: false,
+      icon: "soup"
+    },
+    cutletchicken: {
+      ingredients: [
+        {
+          item: "mincedchicken",
+          name: "Фарш куриный",
+          quantity: 1
+        },
+        {
+          item: "spices",
+          name: "Специи",
+          quantity: 2
+        }
+      ],
+      descr: "",
+      name: "Котлета куриная",
+      type: "food",
+      needsRecipe: false,
+      icon: "cutlet"
+    },
+    pizzapeperoni: {
+      ingredients: [
+        {
+          item: "salt",
+          name: "Соль",
+          quantity: 1
+        },
+        {
+          item: "dough",
+          name: "Тесто",
+          quantity: 2
+        },
+        {
+          item: "cheese",
+          name: "Сыр",
+          quantity: 2
+        },
+        {
+          item: "beef",
+          name: "Говядина",
+          quantity: 1
+        },
+        {
+          item: "tomatoes",
+          name: "Томаты",
+          quantity: 2
+        },
+        {
+          item: "onion",
+          name: "Лук",
+          quantity: 1
+        },
+        {
+          item: "tomatopaste",
+          name: "Томатная паста",
+          quantity: 1
+        }
+      ],
+      descr: "",
+      name: "Пицца 'Пепперони'",
+      type: "food",
+      needsRecipe: false,
+      icon: "pizza"
+    },
+    rollcaesar: {
+      ingredients: [
+        {
+          item: "packaged_chicken",
+          name: "Куриное филе",
+          quantity: 1
+        },
+        {
+          item: "cheese",
+          name: "Сыр",
+          quantity: 1
+        },
+        {
+          item: "cucumber",
+          name: "Огурец",
+          quantity: 1
+        },
+        {
+          item: "tomatoes",
+          name: "Томаты",
+          quantity: 1
+        },
+        {
+          item: "rice",
+          name: "Рис",
+          quantity: 1
+        },
+        {
+          item: "seaweeds",
+          name: "Водоросли",
+          quantity: 1
+        }
+      ],
+      descr: "",
+      name: "Ролл 'Цезарь с курицей'",
+      type: "food",
+      needsRecipe: false,
+      icon: "roll3"
+    },
+    sendwich1: {
+      ingredients: [
+        {
+          item: "spices",
+          name: "Специи",
+          quantity: 1
+        },
+        {
+          item: "packaged_chicken",
+          name: "Куриное филе",
+          quantity: 1
+        },
+        {
+          item: "cheese",
+          name: "Сыр",
+          quantity: 1
+        },
+        {
+          item: "сabbage",
+          name: "Капуста",
+          quantity: 1
+        }
+      ],
+      descr: "",
+      name: "Сендвич с курицей",
+      type: "food",
+      needsRecipe: false,
+      icon: "sandwich"
+    },
+    bisquitfruit: {
+      ingredients: [
+        {
+          item: "apple",
+          name: "Яблоко",
+          quantity: 1
+        },
+        {
+          item: "sugar",
+          name: "Сахар",
+          quantity: 2
+        },
+        {
+          item: "orange",
+          name: "Апельсин",
+          quantity: 2
+        },
+        {
+          item: "dough",
+          name: "Тесто",
+          quantity: 1
+        },
+        {
+          item: "berries",
+          name: "Ягоды",
+          quantity: 3
+        },
+        {
+          item: "nuts",
+          name: "Орехи",
+          quantity: 2
+        },
+        {
+          item: "sourcream",
+          name: "Сметана",
+          quantity: 1
+        }
+      ],
+      descr: "",
+      name: "Фруктовый бисквит",
+      type: "food",
+      needsRecipe: false,
+      icon: "bisquit"
+    },
+    weapon_bottle: {
+      ingredients: [
+        {
+          item: "bottle",
+          name: "Бутылка",
+          quantity: 1
+        }
+      ],
+      descr: "",
+      name: "Розочка",
+      type: "weapon",
+      needsRecipe: false,
+      icon: "brokenbottle"
+    },
+    chocodrink: {
+      ingredients: [
+        {
+          item: "water",
+          name: "Вода",
+          quantity: 1
+        },
+        {
+          item: "candy2",
+          name: "Шоколад",
+          quantity: 1
+        }
+      ],
+      descr: "Горячо и вкусно",
+      name: "Горячий шоколад",
+      type: "drink",
+      needsRecipe: false,
+      icon: "chocodrink"
+    },
+    saladceasar: {
+      ingredients: [
+        {
+          item: "garlic",
+          name: "Чеснок",
+          quantity: 1
+        },
+        {
+          item: "packaged_chicken",
+          name: "Куриное филе",
+          quantity: 1
+        },
+        {
+          item: "tomatoes",
+          name: "Томаты",
+          quantity: 1
+        },
+        {
+          item: "cheese",
+          name: "Сыр",
+          quantity: 1
+        },
+        {
+          item: "salt",
+          name: "Соль",
+          quantity: 1
+        },
+        {
+          item: "bread",
+          name: "Хлеб",
+          quantity: 1
+        }
+      ],
+      descr: "",
+      name: "Салат 'Цезарь'",
+      type: "food",
+      needsRecipe: false,
+      icon: "salad1"
+    },
+    rollphiladelphia: {
+      ingredients: [
+        {
+          item: "fish",
+          name: "Рыба",
+          quantity: 1
+        },
+        {
+          item: "cheese",
+          name: "Сыр",
+          quantity: 1
+        },
+        {
+          item: "cucumber",
+          name: "Огурец",
+          quantity: 1
+        },
+        {
+          item: "rice",
+          name: "Рис",
+          quantity: 1
+        },
+        {
+          item: "seaweeds",
+          name: "Водоросли",
+          quantity: 1
+        },
+        {
+          item: "eggs",
+          name: "Яйца",
+          quantity: 1
+        }
+      ],
+      descr: "",
+      name: "Роллы 'Филадельфия'",
+      type: "food",
+      needsRecipe: false,
+      icon: "roll2"
+    },
+    icecreambanana: {
+      ingredients: [
+        {
+          item: "icecream",
+          name: "Мороженое",
+          quantity: 1
+        },
+        {
+          item: "banana",
+          name: "Банан",
+          quantity: 1
+        }
+      ],
+      descr: "",
+      name: "icecreambanana",
+      type: "food",
+      needsRecipe: false,
+      icon: "icecreambanana"
+    },
+    tomatopaste: {
+      ingredients: [
+        {
+          item: "salt",
+          name: "Соль",
+          quantity: 1
+        },
+        {
+          item: "sugar",
+          name: "Сахар",
+          quantity: 1
+        },
+        {
+          item: "tomatoes",
+          name: "Томаты",
+          quantity: 2
+        },
+        {
+          item: "water",
+          name: "Вода",
+          quantity: 1
+        }
+      ],
+      descr: "",
+      name: "Томатная паста",
+      type: "food",
+      needsRecipe: false,
+      icon: "tomatopaste"
+    },
+    rollamerican: {
+      ingredients: [
+        {
+          item: "bacon",
+          name: "Бекон",
+          quantity: 1
+        },
+        {
+          item: "potato",
+          name: "Картофель",
+          quantity: 1
+        },
+        {
+          item: "eggs",
+          name: "Яйца",
+          quantity: 1
+        },
+        {
+          item: "onion",
+          name: "Лук",
+          quantity: 1
+        },
+        {
+          item: "cheese",
+          name: "Сыр",
+          quantity: 1
+        },
+        {
+          item: "seaweeds",
+          name: "Водоросли",
+          quantity: 1
+        }
+      ],
+      descr: "",
+      name: "'Американ-ролл'",
+      type: "food",
+      needsRecipe: false,
+      icon: "roll4"
+    },
+    cutletfish: {
+      ingredients: [
+        {
+          item: "mincedfish",
+          name: "Фарш рыбный",
+          quantity: 1
+        },
+        {
+          item: "spices",
+          name: "Специи",
+          quantity: 2
+        }
+      ],
+      descr: "",
+      name: "Котлета рыбная",
+      type: "food",
+      needsRecipe: false,
+      icon: "cutlet"
+    },
+    cutletbeef: {
+      ingredients: [
+        {
+          item: "mincedbeef",
+          name: "Фарш говяжий",
+          quantity: 1
+        },
+        {
+          item: "spices",
+          name: "Специи",
+          quantity: 2
+        }
+      ],
+      descr: "",
+      name: "Котлета говяжья",
+      type: "food",
+      needsRecipe: false,
+      icon: "cutlet"
+    },
+    meats: {
+      ingredients: [
+        {
+          item: "packaged_chicken",
+          name: "Куриное филе",
+          quantity: 1
+        },
+        {
+          item: "spices",
+          name: "Специи",
+          quantity: 1
+        }
+      ],
+      descr: "",
+      name: "Котлеты",
+      type: "food",
+      needsRecipe: false,
+      icon: "cutlet"
+    },
+    turkeyveggetables: {
+      ingredients: [
+        {
+          item: "spices",
+          name: "Специи",
+          quantity: 1
+        },
+        {
+          item: "turkey",
+          name: "Индейка",
+          quantity: 1
+        },
+        {
+          item: "potato",
+          name: "Картофель",
+          quantity: 2
+        },
+        {
+          item: "carrot",
+          name: "Морковь",
+          quantity: 2
+        },
+        {
+          item: "tomatoes",
+          name: "Томаты",
+          quantity: 1
+        },
+        {
+          item: "salt",
+          name: "Соль",
+          quantity: 1
+        }
+      ],
+      descr: "",
+      name: "Индейка с овощами",
+      type: "food",
+      needsRecipe: false,
+      icon: "roastedchicken"
+    },
+    lasagna: {
+      ingredients: [
+        {
+          item: "salt",
+          name: "Соль",
+          quantity: 1
+        },
+        {
+          item: "cheese",
+          name: "Сыр",
+          quantity: 1
+        },
+        {
+          item: "dough",
+          name: "Тесто",
+          quantity: 1
+        },
+        {
+          item: "mincehouse",
+          name: "Фарш домашний",
+          quantity: 1
+        },
+        {
+          item: "tomatopaste",
+          name: "Томатная паста",
+          quantity: 1
+        }
+      ],
+      descr: "",
+      name: "Лазанья",
+      type: "food",
+      needsRecipe: false,
+      icon: "lasagna"
+    },
+    pureepork: {
+      ingredients: [
+        {
+          item: "puree",
+          name: "Пюре",
+          quantity: 1
+        },
+        {
+          item: "cutletpork",
+          name: "Котлета свиная",
+          quantity: 1
+        }
+      ],
+      descr: "",
+      name: "Пюре с котлетой (свиной)",
+      type: "food",
+      needsRecipe: false,
+      icon: "pureemeat"
+    },
+    hotdog: {
+      ingredients: [
+        {
+          item: "bun",
+          name: "Булка",
+          quantity: 1
+        },
+        {
+          item: "saucisson",
+          name: "Сосиски",
+          quantity: 1
+        }
+      ],
+      descr: "Нет, это не горячая собака",
+      name: "Хот-дог",
+      type: "food",
+      needsRecipe: false,
+      icon: "hotdog"
+    },
+    shrimpbreading: {
+      ingredients: [
+        {
+          item: "seafood",
+          name: "Морепродукты",
+          quantity: 3
+        },
+        {
+          item: "salt",
+          name: "Соль",
+          quantity: 1
+        },
+        {
+          item: "flour",
+          name: "Мука",
+          quantity: 2
+        },
+        {
+          item: "eggs",
+          name: "Яйца",
+          quantity: 1
+        }
+      ],
+      descr: "",
+      name: "Креветки в панировке",
+      type: "food",
+      needsRecipe: false,
+      icon: "shrimp"
+    },
+    rollcalifornia: {
+      ingredients: [
+        {
+          item: "fish",
+          name: "Рыба",
+          quantity: 1
+        },
+        {
+          item: "cheese",
+          name: "Сыр",
+          quantity: 1
+        },
+        {
+          item: "cucumber",
+          name: "Огурец",
+          quantity: 1
+        },
+        {
+          item: "rice",
+          name: "Рис",
+          quantity: 1
+        },
+        {
+          item: "seaweeds",
+          name: "Водоросли",
+          quantity: 1
+        }
+      ],
+      descr: "",
+      name: "Роллы 'Калифорния'",
+      type: "food",
+      needsRecipe: false,
+      icon: "roll"
+    },
+    risottochicken: {
+      ingredients: [
+        {
+          item: "salt",
+          name: "Соль",
+          quantity: 1
+        },
+        {
+          item: "packaged_chicken",
+          name: "Куриное филе",
+          quantity: 1
+        },
+        {
+          item: "onion",
+          name: "Лук",
+          quantity: 1
+        },
+        {
+          item: "rice",
+          name: "Рис",
+          quantity: 1
+        }
+      ],
+      descr: "",
+      name: "Ризотто с курицей",
+      type: "food",
+      needsRecipe: false,
+      icon: "risotto"
+    },
+    carrotjuice: {
+      ingredients: [
+        {
+          item: "carrot",
+          name: "Морковь",
+          quantity: 1
+        },
+        {
+          item: "water",
+          name: "Вода",
+          quantity: 1
+        }
+      ],
+      descr: "",
+      name: "Сок морковный",
+      type: "drink",
+      needsRecipe: false,
+      icon: "juice"
+    },
+    pureechicken: {
+      ingredients: [
+        {
+          item: "puree",
+          name: "Пюре",
+          quantity: 1
+        },
+        {
+          item: "cutletchicken",
+          name: "Котлета куриная",
+          quantity: 1
+        }
+      ],
+      descr: "",
+      name: "Пюре с котлетой (куриной)",
+      type: "food",
+      needsRecipe: false,
+      icon: "pureemeat"
+    },
+    steakbeef: {
+      ingredients: [
+        {
+          item: "spices",
+          name: "Специи",
+          quantity: 2
+        },
+        {
+          item: "salt",
+          name: "Соль",
+          quantity: 1
+        },
+        {
+          item: "beef",
+          name: "Говядина",
+          quantity: 3
+        },
+        {
+          item: "ketchup",
+          name: "Кетчуп",
+          quantity: 1
+        }
+      ],
+      descr: "",
+      name: "Стейк из говядины",
+      type: "food",
+      needsRecipe: false,
+      icon: "steak"
+    },
+    pureeseabass: {
+      ingredients: [
+        {
+          item: "seabass",
+          name: "Сибас",
+          quantity: 1
+        },
+        {
+          item: "puree",
+          name: "Пюре",
+          quantity: 1
+        }
+      ],
+      descr: "",
+      name: "Сибас с картофельным пюре",
+      type: "food",
+      needsRecipe: false,
+      icon: "puree"
+    },
+    cheesesnack: {
+      ingredients: [
+        {
+          item: "bread",
+          name: "Хлеб",
+          quantity: 1
+        },
+        {
+          item: "cheese",
+          name: "Сыр",
+          quantity: 1
+        },
+        {
+          item: "salt",
+          name: "Соль",
+          quantity: 1
+        }
+      ],
+      descr: "",
+      name: "Сырная закуска",
+      type: "food",
+      needsRecipe: false,
+      icon: "cheese"
+    },
+    raviolihouse: {
+      ingredients: [
+        {
+          item: "mincehouse",
+          name: "Фарш домашний",
+          quantity: 1
+        },
+        {
+          item: "dough",
+          name: "Тесто",
+          quantity: 1
+        },
+        {
+          item: "pepper",
+          name: "Перец",
+          quantity: 1
+        },
+        {
+          item: "salt",
+          name: "Соль",
+          quantity: 1
+        },
+        {
+          item: "mayo",
+          name: "Майонез",
+          quantity: 1
+        }
+      ],
+      descr: "",
+      name: "Домашние пельмени",
+      type: "food",
+      needsRecipe: false,
+      icon: "dumpling"
+    },
+    spagettichicken: {
+      ingredients: [
+        {
+          item: "spagetti",
+          name: "Макароны",
+          quantity: 1
+        },
+        {
+          item: "water",
+          name: "Вода",
+          quantity: 1
+        },
+        {
+          item: "salt",
+          name: "Соль",
+          quantity: 1
+        },
+        {
+          item: "cutletpork",
+          name: "Котлета свиная",
+          quantity: 1
+        }
+      ],
+      descr: "",
+      name: "Макароны с котлетой (куриная)",
+      type: "food",
+      needsRecipe: false,
+      icon: "spaghettimeat"
+    },
+    cake: {
+      ingredients: [
+        {
+          item: "milk",
+          name: "Молоко",
+          quantity: 1
+        },
+        {
+          item: "flour",
+          name: "Мука",
+          quantity: 1
+        },
+        {
+          item: "sugar",
+          name: "Сахар",
+          quantity: 1
+        },
+        {
+          item: "candy2",
+          name: "Шоколад",
+          quantity: 1
+        }
+      ],
+      descr: "",
+      name: "Кекс",
+      type: "food",
+      needsRecipe: false,
+      icon: "cake"
+    },
+    spagettchee: {
+      ingredients: [
+        {
+          item: "spagetti",
+          name: "Макароны",
+          quantity: 1
+        },
+        {
+          item: "cheese",
+          name: "Сыр",
+          quantity: 1
+        },
+        {
+          item: "water",
+          name: "Вода",
+          quantity: 1
+        },
+        {
+          item: "salt",
+          name: "Соль",
+          quantity: 1
+        }
+      ],
+      descr: "",
+      name: "Макароны с сыром",
+      type: "food",
+      needsRecipe: false,
+      icon: "spaghetti"
+    },
+    obed1: {
+      ingredients: [
+        {
+          item: "spices",
+          name: "Специи",
+          quantity: 2
+        },
+        {
+          item: "fish",
+          name: "Рыба",
+          quantity: 1
+        },
+        {
+          item: "potato",
+          name: "Картофель",
+          quantity: 1
+        }
+      ],
+      descr: "Любителям рыбки",
+      name: "Рыбное блюдо",
+      type: "food",
+      needsRecipe: false,
+      icon: "fishfood"
+    },
+    peachcasserole: {
+      ingredients: [
+        {
+          item: "peach",
+          name: "Персик",
+          quantity: 2
+        },
+        {
+          item: "flour",
+          name: "Мука",
+          quantity: 2
+        },
+        {
+          item: "sugar",
+          name: "Сахар",
+          quantity: 1
+        },
+        {
+          item: "sourcream",
+          name: "Сметана",
+          quantity: 1
+        },
+        {
+          item: "salt",
+          name: "Соль",
+          quantity: 1
+        },
+        {
+          item: "eggs",
+          name: "Яйца",
+          quantity: 1
+        }
+      ],
+      descr: "",
+      name: "Персиковая запеканка",
+      type: "food",
+      needsRecipe: false,
+      icon: "casserole"
+    },
+    cheesestick: {
+      ingredients: [
+        {
+          item: "flour",
+          name: "Мука",
+          quantity: 2
+        },
+        {
+          item: "cheese",
+          name: "Сыр",
+          quantity: 1
+        },
+        {
+          item: "eggs",
+          name: "Яйца",
+          quantity: 2
+        },
+        {
+          item: "salt",
+          name: "Соль",
+          quantity: 1
+        }
+      ],
+      descr: "",
+      name: "Сырные палочки",
+      type: "food",
+      needsRecipe: false,
+      icon: "cheese"
+    },
+    spagettipork: {
+      ingredients: [
+        {
+          item: "spagetti",
+          name: "Макароны",
+          quantity: 1
+        },
+        {
+          item: "water",
+          name: "Вода",
+          quantity: 1
+        },
+        {
+          item: "salt",
+          name: "Соль",
+          quantity: 1
+        },
+        {
+          item: "cutletpork",
+          name: "Котлета свиная",
+          quantity: 1
+        }
+      ],
+      descr: "",
+      name: "Макароны с котлетой (свиной)",
+      type: "food",
+      needsRecipe: false,
+      icon: "spaghettimeat"
+    },
+    potatorosemary: {
+      ingredients: [
+        {
+          item: "spices",
+          name: "Специи",
+          quantity: 2
+        },
+        {
+          item: "potato",
+          name: "Картофель",
+          quantity: 3
+        },
+        {
+          item: "garlic",
+          name: "Чеснок",
+          quantity: 1
+        },
+        {
+          item: "salt",
+          name: "Соль",
+          quantity: 1
+        }
+      ],
+      descr: "",
+      name: "Молодой картофель с розмарином",
+      type: "food",
+      needsRecipe: false,
+      icon: "potatofood"
+    },
+    steakpork: {
+      ingredients: [
+        {
+          item: "spices",
+          name: "Специи",
+          quantity: 2
+        },
+        {
+          item: "salt",
+          name: "Соль",
+          quantity: 1
+        },
+        {
+          item: "pork",
+          name: "Свинина",
+          quantity: 3
+        },
+        {
+          item: "ketchup",
+          name: "Кетчуп",
+          quantity: 1
+        }
+      ],
+      descr: "",
+      name: "steak",
+      type: "food",
+      needsRecipe: false,
+      icon: "steak"
+    },
+    spagettibeef: {
+      ingredients: [
+        {
+          item: "spagetti",
+          name: "Макароны",
+          quantity: 1
+        },
+        {
+          item: "water",
+          name: "Вода",
+          quantity: 1
+        },
+        {
+          item: "salt",
+          name: "Соль",
+          quantity: 1
+        },
+        {
+          item: "cutletbeef",
+          name: "Котлета говяжья",
+          quantity: 1
+        }
+      ],
+      descr: "",
+      name: "Макароны с котлетой (говяжьей)",
+      type: "food",
+      needsRecipe: false,
+      icon: "spaghettimeat"
+    },
+    pizzamush: {
+      ingredients: [
+        {
+          item: "salt",
+          name: "Соль",
+          quantity: 1
+        },
+        {
+          item: "dough",
+          name: "Тесто",
+          quantity: 2
+        },
+        {
+          item: "cheese",
+          name: "Сыр",
+          quantity: 2
+        },
+        {
+          item: "mushrooms",
+          name: "Грибы",
+          quantity: 3
+        },
+        {
+          item: "tomatoes",
+          name: "Томаты",
+          quantity: 2
+        },
+        {
+          item: "onion",
+          name: "Лук",
+          quantity: 1
+        },
+        {
+          item: "tomatopaste",
+          name: "Томатная паста",
+          quantity: 1
+        }
+      ],
+      descr: "",
+      name: "Пицца грибная",
+      type: "food",
+      needsRecipe: false,
+      icon: "pizza"
+    },
+    puree: {
+      ingredients: [
+        {
+          item: "potato",
+          name: "Картофель",
+          quantity: 3
+        },
+        {
+          item: "milk",
+          name: "Молоко",
+          quantity: 1
+        },
+        {
+          item: "salt",
+          name: "Соль",
+          quantity: 1
+        },
+        {
+          item: "oil",
+          name: "Масло",
+          quantity: 1
+        }
+      ],
+      descr: "",
+      name: "Пюре",
+      type: "food",
+      needsRecipe: false,
+      icon: "puree"
+    },
+    icecreamdrage: {
+      ingredients: [
+        {
+          item: "icecream",
+          name: "Мороженое",
+          quantity: 1
+        },
+        {
+          item: "candy1",
+          name: "Драже",
+          quantity: 5
+        }
+      ],
+      descr: "",
+      name: "icecreamdrage",
+      type: "food",
+      needsRecipe: false,
+      icon: "icecreamdrage"
+    },
+    seabass: {
+      ingredients: [
+        {
+          item: "tomatopaste",
+          name: "Томатная паста",
+          quantity: 2
+        },
+        {
+          item: "spices",
+          name: "Специи",
+          quantity: 2
+        },
+        {
+          item: "fish",
+          name: "Рыба",
+          quantity: 2
+        },
+        {
+          item: "salt",
+          name: "Соль",
+          quantity: 1
+        }
+      ],
+      descr: "",
+      name: "Сибас",
+      type: "food",
+      needsRecipe: false,
+      icon: "fish"
+    },
+    steakfish: {
+      ingredients: [
+        {
+          item: "spices",
+          name: "Специи",
+          quantity: 2
+        },
+        {
+          item: "salt",
+          name: "Соль",
+          quantity: 1
+        },
+        {
+          item: "fish",
+          name: "Рыба",
+          quantity: 3
+        },
+        {
+          item: "ketchup",
+          name: "Кетчуп",
+          quantity: 1
+        }
+      ],
+      descr: "",
+      name: "steak",
+      type: "food",
+      needsRecipe: false,
+      icon: "steak"
+    },
+    icecreamstrawberry: {
+      ingredients: [
+        {
+          item: "icecream",
+          name: "Мороженое",
+          quantity: 1
+        },
+        {
+          item: "strawberry",
+          name: "Клубника",
+          quantity: 1
+        }
+      ],
+      descr: "",
+      name: "Клубничное мороженое",
+      type: "food",
+      needsRecipe: false,
+      icon: "icecream2"
+    },
+    slivstraw: {
+      ingredients: [
+        {
+          item: "strawberry",
+          name: "Клубника",
+          quantity: 1
+        },
+        {
+          item: "slivki",
+          name: "Сливки",
+          quantity: 1
+        }
+      ],
+      descr: "Мммм, вкусно!",
+      name: "Клубника со сливками",
+      type: "food",
+      needsRecipe: false,
+      icon: "slivstraw"
+    },
+    tomatojuice: {
+      ingredients: [
+        {
+          item: "tomatoes",
+          name: "Томаты",
+          quantity: 1
+        },
+        {
+          item: "water",
+          name: "Вода",
+          quantity: 1
+        }
+      ],
+      descr: "",
+      name: "Сок томатный",
+      type: "drink",
+      needsRecipe: false,
+      icon: "juice"
+    },
+    chickenbatter: {
+      ingredients: [
+        {
+          item: "packaged_chicken",
+          name: "Куриное филе",
+          quantity: 1
+        },
+        {
+          item: "salt",
+          name: "Соль",
+          quantity: 1
+        },
+        {
+          item: "eggs",
+          name: "Яйца",
+          quantity: 1
+        },
+        {
+          item: "mayo",
+          name: "Майонез",
+          quantity: 1
+        },
+        {
+          item: "oil",
+          name: "Масло",
+          quantity: 1
+        }
+      ],
+      descr: "",
+      name: "Жареный цыпленок в кляре",
+      type: "food",
+      needsRecipe: false,
+      icon: "roastedchicken"
+    },
+    ratatouille: {
+      ingredients: [
+        {
+          item: "onion",
+          name: "Лук",
+          quantity: 1
+        },
+        {
+          item: "garlic",
+          name: "Чеснок",
+          quantity: 1
+        },
+        {
+          item: "tomatoes",
+          name: "Томаты",
+          quantity: 2
+        },
+        {
+          item: "cucumber",
+          name: "Огурец",
+          quantity: 2
+        },
+        {
+          item: "tomatopaste",
+          name: "Томатная паста",
+          quantity: 2
+        }
+      ],
+      descr: "",
+      name: "Рататуй",
+      type: "food",
+      needsRecipe: false,
+      icon: "salad3"
+    },
+    eggsbacon: {
+      ingredients: [
+        {
+          item: "eggs",
+          name: "Яйца",
+          quantity: 3
+        },
+        {
+          item: "bacon",
+          name: "Бекон",
+          quantity: 2
+        },
+        {
+          item: "oil",
+          name: "Масло",
+          quantity: 1
+        },
+        {
+          item: "ketchup",
+          name: "Кетчуп",
+          quantity: 1
+        }
+      ],
+      descr: "",
+      name: "eggsbacon",
+      type: "food",
+      needsRecipe: false,
+      icon: "eggsbacon"
+    },
+    eggmushpaste: {
+      ingredients: [
+        {
+          item: "spices",
+          name: "Специи",
+          quantity: 2
+        },
+        {
+          item: "spagetti",
+          name: "Макароны",
+          quantity: 1
+        },
+        {
+          item: "eggs",
+          name: "Яйца",
+          quantity: 1
+        },
+        {
+          item: "sourcream",
+          name: "Сметана",
+          quantity: 1
+        },
+        {
+          item: "mushrooms",
+          name: "Грибы",
+          quantity: 1
+        }
+      ],
+      descr: "",
+      name: "Паста с белыми грибами и Яйцам",
+      type: "food",
+      needsRecipe: false,
+      icon: "spaghetti"
+    },
+    saladfruite: {
+      ingredients: [
+        {
+          item: "apple",
+          name: "Яблоко",
+          quantity: 2
+        },
+        {
+          item: "banana",
+          name: "Банан",
+          quantity: 1
+        },
+        {
+          item: "orange",
+          name: "Апельсин",
+          quantity: 1
+        },
+        {
+          item: "yogurt",
+          name: "Йогурт",
+          quantity: 1
+        },
+        {
+          item: "grapperaisin",
+          name: "Гроздь винограда",
+          quantity: 1
+        }
+      ],
+      descr: "",
+      name: "Фруктовый салат",
+      type: "food",
+      needsRecipe: false,
+      icon: "salad2"
+    }
   },
   inventory: [
     // {
