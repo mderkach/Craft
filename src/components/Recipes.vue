@@ -1,39 +1,45 @@
 <template>
   <div class="recipes__wrapper">
-    <v-list-item-group color="primary" v-if="items">
-      <v-list-item
-        dense
-        v-for="(item, i) in items"
-        :key="i"
-        @click="getItem(item, i)"
-      >
-        <div class="icon" v-html="renderIcon(item)"></div>
-        <v-list-item-content two-line>
-          <v-list-item-title v-text="item.name"></v-list-item-title>
-          <v-list-item-subtitle v-text="item.descr"></v-list-item-subtitle>
-        </v-list-item-content>
-      </v-list-item>
-    </v-list-item-group>
-    <v-list-item v-else>
-      <v-list-item-content>
-        <v-list-item-title>Нет доступных рецептов</v-list-item-title>
-      </v-list-item-content>
-    </v-list-item>
+    <v-expansion-panels accordion tile>
+      <v-expansion-panel v-for="(item, i) in assignFilters" :key="i">
+        <v-expansion-panel-header>{{ item.name }}</v-expansion-panel-header>
+        <v-expansion-panel-content>
+          <v-list-item-group color="primary" v-if="item.items">
+            <v-list-item
+              dense
+              v-for="(recipe, i) in item.items"
+              :key="i"
+              @click="getItem(recipe, i)"
+            >
+              <div class="icon" v-html="renderIcon(recipe)"></div>
+              <v-list-item-content two-line>
+                <v-list-item-title v-text="recipe.name"></v-list-item-title>
+                <v-list-item-subtitle
+                  v-text="recipe.descr"
+                ></v-list-item-subtitle>
+              </v-list-item-content>
+            </v-list-item>
+          </v-list-item-group>
+          <v-list-item v-else>
+            <v-list-item-content>
+              <v-list-item-title>Нет доступных рецептов</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+        </v-expansion-panel-content>
+      </v-expansion-panel>
+    </v-expansion-panels>
   </div>
 </template>
 
 <script>
-import { mapMutations, mapState } from "vuex";
+import { mapMutations, mapGetters } from "vuex";
 import icons from "../plugins/icons";
 
 export default {
   name: "Recipes",
-  props: {
-    items: {
-      type: Object,
-      default: () => {}
-    }
-  },
+  data: () => ({
+    filteredRecipes: []
+  }),
   mixins: [icons],
   methods: {
     ...mapMutations(["set_item"]),
@@ -60,10 +66,83 @@ export default {
         }
       });
       return item.icon;
+    },
+    filter(handler, type) {
+      let result = [];
+      if (type.length > 1) {
+        result = Object.entries(handler).filter(
+          item => item[1].type === type[0] || item[1].type === type[1]
+        );
+      } else {
+        result = Object.entries(handler).filter(
+          item => item[1].type === type[0]
+        );
+      }
+
+      if (result.length !== 0) {
+        const resultObj = Object.assign(
+          ...result.map(([key, val]) => ({ [key]: val }))
+        );
+        return resultObj;
+      } else {
+        const resultObj = Object.assign({}, {});
+        return resultObj;
+      }
+    },
+    assign() {
+      console.log("called assign");
+      let keys = Object.keys(this.filteredRecipes);
+      for (let i = 0; i < keys.length; i++) {
+        delete this.filteredRecipes[keys[i]];
+      }
+      this.filteredRecipes.splice(0, this.filteredRecipes.length);
+      const foodAndDrink = this.filter(this.recipes, ["drink", "food"]);
+      const weapon = this.filter(this.recipes, ["weapon"]);
+      const ammo = this.filter(this.recipes, ["ammo"]);
+      const throwable = this.filter(this.recipes, ["throwable"]);
+
+      if (
+        Object.keys(foodAndDrink).length !== 0 &&
+        foodAndDrink.constructor === Object
+      ) {
+        this.filteredRecipes.push({
+          name: "Еда и напитки",
+          items: foodAndDrink
+        });
+      }
+
+      if (Object.keys(weapon).length !== 0 && weapon.constructor === Object) {
+        this.filteredRecipes.push({
+          name: "Оружие",
+          items: weapon
+        });
+      }
+
+      if (Object.keys(ammo).length !== 0 && ammo.constructor === Object) {
+        this.filteredRecipes.push({
+          name: "Патроны",
+          items: ammo
+        });
+      }
+
+      if (
+        Object.keys(throwable).length !== 0 &&
+        throwable.constructor === Object
+      ) {
+        this.filteredRecipes.push({
+          name: "Метательное",
+          items: throwable
+        });
+      }
+      console.log(this.filteredRecipes);
+      return this.filteredRecipes;
     }
   },
   computed: {
-    ...mapState(["inventory"])
+    ...mapGetters(["inventory", "recipes"]),
+    assignFilters() {
+      return this.assign();
+    }
   }
 };
 </script>

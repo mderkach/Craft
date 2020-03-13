@@ -9,7 +9,7 @@
     </v-card-text>
     <div class="table__wrapper">
       <v-simple-table dense fixed-header>
-        <template v-slot:default v-if="inventory !== null">
+        <template v-slot:default v-if="inventory">
           <thead>
             <tr>
               <th class="text-left">Предмет</th>
@@ -36,13 +36,11 @@
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 export default {
   name: "Inventory",
-  props: {
-    inventory: {
-      type: Array,
-      default: () => []
-    }
+  computed: {
+    ...mapGetters(["inventory"])
   }
 };
 </script>

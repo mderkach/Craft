@@ -1,3 +1,5 @@
+const webpack = require("webpack");
+
 module.exports = {
   transpileDependencies: ["vuetify"],
   publicPath: "",
@@ -18,5 +20,15 @@ module.exports = {
       warnings: true,
       errors: true
     }
+  },
+  configureWebpack: {
+    plugins: [
+      new webpack.optimize.LimitChunkCountPlugin({
+        maxChunks: 1
+      })
+    ]
+  },
+  chainWebpack: config => {
+    config.optimization.delete("splitChunks");
   }
 };

@@ -10,14 +10,14 @@
         <div class="blue lighten-1">
           <h2 class="text text-center">Рецепты</h2>
         </div>
-        <Recipes :items="recipes" />
+        <Recipes />
       </v-col>
       <v-col class="py-0" cols="8" style="overflow: hidden">
         <div class="blue lighten-1">
           <h2 class="text text-center">Предмет</h2>
         </div>
-        <Item :item="item" />
-        <Inventory :inventory="inventory" />
+        <Item />
+        <Inventory />
       </v-col>
     </v-row>
     <v-btn @click="close" class="close">
@@ -27,7 +27,7 @@
 </template>
 
 <script>
-import { mapState, mapGetters, mapMutations } from "vuex";
+import { mapMutations } from "vuex";
 import axios from "axios";
 import Recipes from "./Recipes";
 import Item from "./Item";
@@ -58,11 +58,10 @@ export default {
       document.querySelector("#app").classList.add("active");
     } else {
       window.addEventListener("message", event => {
-        // console.log(JSON.stringify(event.data));
         this.show(event.data.show);
         if (event.data.show !== 0) {
-          let inventory = event.data.inventory.items;
-          let recipes = event.data.recipes;
+          const inventory = event.data.inventory.items;
+          const recipes = event.data.recipes;
 
           if (inventory) {
             this.$store.commit("set_inventory", inventory);
@@ -73,7 +72,7 @@ export default {
           }
         }
 
-        // console.log(this.inventory, this.recipes);
+        // console.log(event.data);
         // console.log(JSON.stringify(this.inventory));
         // console.log(JSON.stringify(this.recipes));
       });
@@ -86,8 +85,6 @@ export default {
     });
   },
   computed: {
-    ...mapState(["recipes", "inventory", "item"]),
-    ...mapGetters(["recipes", "inventory", "item"]),
     ...mapMutations(["set_inventory", "set_recipes"])
   }
 };

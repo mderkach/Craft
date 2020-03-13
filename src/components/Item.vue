@@ -79,21 +79,15 @@
 
 <script>
 import axios from "axios";
-import { mapMutations } from "vuex";
+import { mapGetters } from "vuex";
 
 export default {
   name: "Item",
-  props: {
-    item: {
-      type: Object,
-      default: () => {}
-    }
-  },
   data: () => ({
     count: 0
   }),
   computed: {
-    ...mapMutations(["set_item"]),
+    ...mapGetters(["item"]),
     calcuteCraft() {
       let total = 0;
       let temp = [];
